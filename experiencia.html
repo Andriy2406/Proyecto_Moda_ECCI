@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Experiencia — Moda ECCI</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR (igual en todas las páginas) -->
+  <nav class="navbar navbar-expand-md sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false"
+              aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-md-center gap-1">
+          <li class="nav-item">
+            <a class="nav-link lang-es" href="index.html">Inicio</a>
+            <a class="nav-link lang-en" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activo lang-es" href="experiencia.html">Mi Experiencia</a>
+            <a class="nav-link activo lang-en" href="experiencia.html">My Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lang-es" href="glosario.html">Glosario</a>
+            <a class="nav-link lang-en" href="glosario.html">Glossary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lang-es" href="sostenibilidad.html">Sostenibilidad</a>
+            <a class="nav-link lang-en" href="sostenibilidad.html">Sustainability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  lang-es" href="referencias.html">Referencias</a>
+            <a class="nav-link  lang-en" href="referencias.html">References</a>
+          </li>
+          <li class="nav-item ms-md-2">
+            <button class="btn-idioma" id="btn-idioma">EN</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO COMPACTO -->
+  <header class="hero hero-mini">
+    <h1 class="lang-es">Mi experiencia en Moda ECCI</h1>
+    <h1 class="lang-en">My experience at Moda ECCI</h1> <br>
+    <p class="lang-es">Aprendizajes, reflexiones y conexiones entre la moda y el desarrollo de software</p>
+    <p class="lang-en">Learnings, reflections and connections between fashion and software development</p>
+  </header>
+
+
+  <main class="contenedor">
+
+    <!-- ====================================================
+         CARRUSEL DE FOTOS
+         ==================================================== -->
+    <h2 class="seccion-titulo">
+      <span class="lang-es">Galería del evento</span>
+      <span class="lang-en">Event Gallery</span>
+    </h2>
+
+    <div class="carousel-custom mb-2" id="car-fotos" data-total="12">
+      <div class="carousel__track-wrapper">
+        <div class="carousel__track">
+
+        
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_1.jpg" alt="Foto 1 del evento Moda ECCI" />
+          </div>
+
+      
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_2.jpg" alt="Foto 2 del evento Moda ECCI" />
+          </div>
+
+         
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_3.jpg" alt="Foto 3 del evento Moda ECCI" />
+          </div>
+
+        
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_4.jpg" alt="Foto 4 del evento Moda ECCI" />
+          </div>
+
+          
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_5.jpg" alt="Foto 5 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_6.jpg" alt="Foto 6 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_7.jpg" alt="Foto 7 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_8.jpg" alt="Foto 8 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_9.jpg" alt="Foto 9 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_10.jpg" alt="Foto 10 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_11.jpg" alt="Foto 11 del evento Moda ECCI" />
+          </div>
+
+          <div class="carousel__slide">
+            <img src="Assets/Imagenes/IMG_12.jpg" alt="Foto 12 del evento Moda ECCI" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Botones de navegación del carrusel -->
+      <button class="carousel__btn carousel__btn--prev"
+              onclick="moveCarousel('car-fotos', -1)"
+              aria-label="Foto anterior">&#8592;</button>
+      <button class="carousel__btn carousel__btn--next"
+              onclick="moveCarousel('car-fotos', 1)"
+              aria-label="Foto siguiente">&#8594;</button>
+    </div>
+
+    <!-- Contador de fotos -->
+    <p class="carousel__counter">
+      <span id="car-fotos-count">1 / 12</span>
+    </p>
+
+    <!-- ====================================================
+         APRENDIZAJES — Accordion Bootstrap
+         Cada ítem cubre un tema del evento
+         ==================================================== -->
+    <h2 class="seccion-titulo">
+      <span class="lang-es">Aprendizajes obtenidos</span>
+      <span class="lang-en">Key Learnings</span>
+    </h2>
+
+    <div class="accordion mb-4" id="accordionAprendizajes">
+
+      <!-- Ítem 1: Teoría del color -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#aprendizaje1"
+                  aria-expanded="true">
+            <span class="lang-es">Teoría del color</span>
+            <span class="lang-en">Color Theory</span>
+          </button>
+        </h2>
+        <div id="aprendizaje1" class="accordion-collapse collapse show"
+             data-bs-parent="#accordionAprendizajes">
+          <div class="accordion-body">
+
+            <!-- Versión en español -->
+            <div class="bloque-es">
+              <p>
+                La teoría del color estudia cómo los colores se relacionan entre sí y cómo generan
+                percepciones en las personas. En diseño, el color no es solo estético: comunica emociones,
+                crea jerarquía visual y define la identidad de una marca. Sara Viloria explicó que cada
+                color tiene una <strong>carga emocional</strong> y que el diseñador debe conocer antes de aplicarlo.
+              </p>
+              <p>
+                Para el desarrollo FrontEnd, esto se traduce en elegir paletas coherentes, usar el contraste
+                correctamente para la accesibilidad y aplicar el color como una herramienta de
+                comunicación, no solo de decoración.
+              </p>
+            </div>
+
+            <!-- Versión en inglés -->
+            <div class="bloque-en">
+              <p>
+                Color theory studies how colors relate to each other and how they generate perceptions in
+                people. In design, color is not just aesthetic: it communicates emotions, creates visual
+                hierarchy and defines brand identity. Sara Viloria explained that each color has an
+                <strong>emotional charge</strong> and that the designer must understand before applying it.
+              </p>
+              <p>
+                For FrontEnd development, this translates into choosing coherent palettes, using contrast
+                correctly for accessibility and applying color as a communication tool, not just decoration.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Ítem 2: Semiología del color -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#aprendizaje2"
+                  aria-expanded="false">
+            <span class="lang-es">Semiología del color</span>
+            <span class="lang-en">Color Semiology</span>
+          </button>
+        </h2>
+        <div id="aprendizaje2" class="accordion-collapse collapse"
+             data-bs-parent="#accordionAprendizajes">
+          <div class="accordion-body">
+
+            <div class="bloque-es">
+              <p>
+                La semiología estudia los signos y sus significados. Aplicada al color, nos permite entender
+                por qué el rojo se asocia al peligro o la pasión, el verde a la naturaleza o la salud,
+                y el azul a la confianza o la tecnología. Estos significados no son universales: cambian
+                según la cultura y el contexto.
+              </p>
+              <p>
+                En interfaces digitales, conocer la semiología del color ayuda a diseñar botones, alertas
+                y estados de manera que el usuario los entienda de manera intuitiva.
+              </p>
+            </div>
+
+            <div class="bloque-en">
+              <p>
+                Semiology studies signs and their meanings. Applied to color, it helps us understand why
+                red is associated with danger or passion, green with nature or health, and blue with trust
+                or technology. These meanings are not universal: they change according to culture and context.
+              </p>
+              <p>
+                In digital interfaces, knowing color semiology helps design buttons, alerts and states so
+                that users understand them intuitively.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Ítem 3: Sistema Pantone -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#aprendizaje3"
+                  aria-expanded="false">
+            <span class="lang-es">Sistema Pantone</span>
+            <span class="lang-en">Pantone System</span>
+          </button>
+        </h2>
+        <div id="aprendizaje3" class="accordion-collapse collapse"
+             data-bs-parent="#accordionAprendizajes">
+          <div class="accordion-body">
+
+            <div class="bloque-es">
+              <p>
+                Pantone es un sistema estandarizado de identificación del color usado globalmente en la
+                industria del diseño, la moda y la impresión. Cada color tiene un código único (por ejemplo,
+                Pantone 19-4052 TCX es el famoso "Classic Blue"). Esto permite que un diseñador en Colombia
+                y una fábrica en China produzcan exactamente el mismo tono.
+              </p>
+              <p>
+                En el desarrollo digital, Pantone se convierte en valores hexadecimales o RGB que garantizan
+                consistencia visual entre pantallas, aplicaciones e impresiones físicas.
+              </p>
+            </div>
+
+            <div class="bloque-en">
+              <p>
+                Pantone is a standardized color identification used globally in the design, fashion
+                and printing industry. Each color has a unique code (for example, Pantone 19-4052 TCX is
+                the famous "Classic Blue"). This allows a designer in Colombia and a factory in China to
+                produce exactly the same shade.
+              </p>
+              <p>
+                In digital development, Pantone is converted to hexadecimal or RGB values that guarantee
+                visual consistency between screens, applications and physical prints.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Ítem 4: Color en experiencia de usuario -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#aprendizaje4"
+                  aria-expanded="false">
+            <span class="lang-es">Color para el interfaz de usuario</span>
+            <span class="lang-en">Color for the user interface</span>
+          </button>
+        </h2>
+        <div id="aprendizaje4" class="accordion-collapse collapse"
+             data-bs-parent="#accordionAprendizajes">
+          <div class="accordion-body">
+
+            <div class="bloque-es">
+              <p>
+                Una de las lecciones más valiosas fue entender que el color en una interfaz digital
+                no es solo visual: guía al usuario, indica estados (éxito, error, advertencia) y
+                establece jerarquía de información. Un botón verde indica acción positiva, un texto
+                gris indica información secundaria, un rojo indica peligro o error.
+              </p>
+            </div>
+
+            <div class="bloque-en">
+              <p>
+                One of the most valuable lessons was understanding that color in a digital interface is
+                not just visual: it guides the user, indicates states (success, error, warning) and
+                establishes information hierarchy. A green button indicates positive action, gray text
+                indicates secondary information, red indicates danger or error.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- fin accordion -->
+
+
+    <!-- ====================================================
+         REFLEXIÓN PERSONAL
+         Modal Bootstrap para la reflexión extendida
+         ==================================================== -->
+    <h2 class="seccion-titulo">
+      <span class="lang-es">Reflexión personal</span>
+      <span class="lang-en">Personal Reflection</span>
+    </h2>
+
+    <div class="tarjeta tarjeta-acento">
+      <p class="lang-es">
+        Asistir al evento Moda ECCI fue una experiencia que amplió mi perspectiva sobre el diseño.
+        Siempre pensé que la moda y el software eran mundos muy diferentes, pero este evento me
+        demostró que comparten algo fundamental: <strong>ambos comunican</strong>. Una interfaz bien
+        diseñada y una prenda bien confeccionada le hablan al usuario o al espectador sin necesidad
+        de palabras.
+      </p>
+      <p class="lang-en">
+        Attending fashion ECCI helped me see design in a different way.
+        I thought fashion and software were very different, but both communicate with people.
+        A good interface and a well-made garment can share a message without words.
+      </p>
+
+      <!-- Botón para abrir modal con reflexión completa -->
+      <button type="button" class="btn btn-outline-primary mt-2"
+              data-bs-toggle="modal" data-bs-target="#modalReflexion">
+        <span class="lang-es">Leer reflexión completa</span>
+        <span class="lang-en">Read full reflection</span>
+      </button>
+    </div>
+
+
+
+    <!-- fin cards -->
+
+  </main>
+
+
+  <!-- ====================================================
+       MODAL — Reflexión personal completa (Bootstrap Modal)
+       ==================================================== -->
+  <div class="modal fade" id="modalReflexion" tabindex="-1"
+       aria-labelledby="modalReflexionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" style="background: var(--color-azul-claro);">
+          <h5 class="modal-title" id="modalReflexionLabel" style="color: var(--color-azul);">
+            <span class="lang-es">Reflexión personal completa</span>
+            <span class="lang-en">Full Personal Reflection</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Reflexión completa en español -->
+          <div class="bloque-es">
+            <p>
+              Antes del evento, el término "industria de la moda" me parecía ajeno a mi carrera.
+              Mi enfoque estaba completamente en código, algoritmos y bases de datos. Pero Moda ECCI
+              me mostró que el diseño es una competencia transversal: afecta a todo producto que
+              alguien vaya a usar, ver o sentir.
+            </p>
+            <p>
+              La conferencia de Sara Viloria sobre teoría del color fue increible.
+              Entender que el color no es solo una elección estética sino una decisión estratégica
+              cambia la forma en que veo el desarrollo FrontEnd. Cuando elijo el color de un botón,
+              estoy comunicando algo. Cuando decido el contraste de un texto, estoy pensando en
+              accesibilidad. Cuando defino una paleta para un proyecto, estoy construyendo una
+              identidad visual.
+            </p>
+            <p>
+              Este evento también me hizo reflexionar que los colores tambien comunican un significado
+              visual tambien se puede ver que refleja un sentimiento muy profundo ya que todos los
+              colores representan algo importente, es tanto que Sara nos dijo que pensaramos un color
+              y una emoción ya que eso nos puede representar algo: el cual elegi <strong>El gris Tranquilidad</strong>
+              para mi ese color representa una tranquilidad de niñez. Como cuando uno paseaba con la familia
+              y esas mañanas tan tranquilas grises del amanecer algo el cual uno anhela volver a tener o vivir.
+            </p>
+          </div>
+
+          <!-- Reflexión completa en inglés -->
+          <div class="bloque-en">
+            <p>
+              Before the event, the fashion industry seemed unrelated to my career.
+              My focus was on code, algorithms, and databases. However, Moda ECCI showed me 
+              that design is important in every product people use.
+            </p>
+
+            <p>
+              Sara Viloria's lecture about color theory was very interesting. It taught 
+              me that colors are not only about appearance.
+              They also communicate ideas and help create a visual identity.
+            </p>
+
+            <p>
+              This event also made me think about how colors express emotions.
+              I chose <strong>gray and tranquility</strong> because they remind 
+              me of family trips and peaceful moments from my childhood.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <span class="lang-es">Cerrar</span>
+            <span class="lang-en">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin modal -->
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>
+      <span class="lang-es"><strong>Jhostin Andriy Guzman Rojas — </strong></span>
+      <span class="lang-en"><strong>Jhostin Andriy Guzman Rojas — </strong></span>
+      <strong>Moda ECCI 2026</strong> ·
+      <span class="lang-es"><strong>ADSO · SENA · Centro de Manufactura en Textil y Cuero</strong></span>
+      <span class="lang-en"><strong>ADSO · SENA · Manufacturing Center in Textiles and Leather</strong></span>
+    </p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>

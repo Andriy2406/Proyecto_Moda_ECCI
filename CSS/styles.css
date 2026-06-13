@@ -1,0 +1,545 @@
+
+
+
+/* --- Reset básico --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Estilos generales --- */
+body {
+  background-color: #f5f6fa;
+  color: #2c2c3e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+
+/* ============================================
+   NAVBAR (Bootstrap + colores del proyecto)
+   ============================================ */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #bdd0f5;
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+}
+
+.navbar-brand {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.1rem;
+  color: #3a7bd5 !important;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #6b7280 !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.activo {
+  background-color: #e8f0fb;
+  color: #3a7bd5 !important;
+}
+
+/* Botón de idioma ES / EN */
+.btn-idioma {
+  background-color: #e8f0fb;
+  color: #3a7bd5;
+  border: 1.5px solid #bdd0f5;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-idioma:hover {
+  background-color: #3a7bd5;
+  color: #ffffff;
+}
+
+
+/* ============================================
+   CAMBIO DE IDIOMA
+   El JS agrega la clase "english" al body
+   ============================================ */
+.lang-en { display: none; }
+.lang-es { display: inline; }
+
+body.english .lang-es { display: none; }
+body.english .lang-en { display: inline; }
+
+.bloque-en { display: none; }
+.bloque-es { display: block; }
+
+body.english .bloque-es { display: none; }
+body.english .bloque-en { display: block; }
+
+
+/* ============================================
+   HERO — Encabezado de cada página
+   ============================================ */
+.hero {
+  background: linear-gradient(135deg, #3a7bd5 0%, #1a4fa0 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+}
+
+.hero h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Hero más compacto para páginas internas */
+.hero-mini {
+  padding: 2.2rem 1.5rem 1.8rem;
+}
+
+.hero-mini h1 {
+  font-size: 1.7rem;
+}
+
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+
+/* ============================================
+   TARJETAS
+   ============================================ */
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(58, 123, 213, 0.10);
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  border-left: 4px solid #3a7bd5;
+  transition: box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 6px 24px rgba(58, 123, 213, 0.16);
+}
+
+.tarjeta h2 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.3rem;
+  color: #3a7bd5;
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta h3 {
+  font-size: 1rem;
+  color: #2c2c3e;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+}
+
+.tarjeta p {
+  color: #2c2c3e;
+  font-size: 0.97rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Variante dorada (sección experiencia / conferencista) */
+.tarjeta-acento {
+  border-left-color: #f0a500;
+}
+
+/* Variante verde (sección sostenibilidad) */
+.tarjeta-verde {
+  border-left-color: #2a9d5c;
+}
+
+
+/* ============================================
+   MINI TARJETAS — Grid de inicio
+   ============================================ */
+.mini-tarjeta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(58, 123, 213, 0.10);
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  height: 100%;
+}
+
+.mini-tarjeta:hover {
+  box-shadow: 0 6px 24px rgba(58, 123, 213, 0.16);
+}
+
+.mini-tarjeta h3 {
+  font-size: 1rem;
+  color: #3a7bd5;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.mini-tarjeta p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+
+/* ============================================
+   SEPARADOR DE SECCIÓN
+   ============================================ */
+.seccion-titulo {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  color: #3a7bd5;
+  margin: 2rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #bdd0f5;
+}
+
+
+/* ============================================
+   CARRUSEL DE FOTOS
+   Compatible con la función moveCarousel() del JS
+   ============================================ */
+.carousel-custom {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #1a1a2e;
+}
+
+.carousel__track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Flechas del carrusel */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(58, 123, 213, 0.85);
+  color: #ffffff;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__btn:hover {
+  background-color: #3a7bd5;
+}
+
+.carousel__btn--prev { left: 10px; }
+.carousel__btn--next { right: 10px; }
+
+/* Contador de fotos */
+.carousel__counter {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+
+/* ============================================
+   TABLA / GLOSARIO
+   ============================================ */
+.tabla-contenedor {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(58, 123, 213, 0.10);
+}
+
+thead {
+  background-color: #3a7bd5;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.15s;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e8f0fb;
+}
+
+tbody tr:hover {
+  background-color: #dce9fb;
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+
+/* ============================================
+   ACCORDION (Bootstrap — colores del proyecto)
+   ============================================ */
+.accordion-button:not(.collapsed) {
+  background-color: #e8f0fb;
+  color: #3a7bd5;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(58, 123, 213, 0.25);
+}
+
+.accordion-item {
+  border: 1px solid #bdd0f5;
+  margin-bottom: 0.5rem;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+
+/* ============================================
+   CARDS DE SOSTENIBILIDAD
+   ============================================ */
+.card-sostenibilidad {
+  background-color: #e6f7ef;
+  border: 1.5px solid #a8dfc0;
+  border-radius: 10px;
+  padding: 1.4rem;
+  text-align: center;
+  height: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.card-sostenibilidad:hover {
+  box-shadow: 0 6px 24px rgba(58, 123, 213, 0.16);
+}
+
+.card-sostenibilidad h3 {
+  color: #2a9d5c;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.card-sostenibilidad p {
+  font-size: 0.88rem;
+  color: #2c2c3e;
+}
+
+
+/* ============================================
+   ETIQUETAS (badges)
+   ============================================ */
+.etiqueta {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.etiqueta-ventaja {
+  background-color: #e6f7ef;
+  color: #2a9d5c;
+}
+
+.etiqueta-desventaja {
+  background-color: #fdf0ee;
+  color: #d94f3d;
+}
+
+.etiqueta-acento {
+  background-color: #fff8e1;
+  color: #f0a500;
+}
+
+.etiqueta-azul {
+  background-color: #e8f0fb;
+  color: #3a7bd5;
+}
+
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+footer a {
+  color: #3a7bd5;
+  text-decoration: none;
+}
+
+
+/* ============================================
+   SECCIÓN DE REFERENCIAS
+   ============================================ */
+.ref-tarjeta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(58, 123, 213, 0.10);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.4rem;
+  border-left: 4px solid #3a7bd5;
+  transition: box-shadow 0.2s;
+}
+
+.ref-tarjeta:hover {
+  box-shadow: 0 6px 24px rgba(58, 123, 213, 0.16);
+}
+
+.ref-tarjeta h3 {
+  font-size: 1rem;
+  color: #3a7bd5;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ref-tarjeta p {
+  font-size: 0.93rem;
+  color: #2c2c3e;
+  margin-bottom: 0.3rem;
+}
+
+.ref-tarjeta .rol-ia {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Versículo bíblico */
+.versiculo {
+  background-color: #fff8e1;
+  border-left: 4px solid #f0a500;
+  border-radius: 10px;
+  padding: 1.4rem 1.8rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.versiculo p {
+  font-size: 1.05rem;
+  color: #2c2c3e;
+  margin-bottom: 0.4rem;
+}
+
+.versiculo cite {
+  font-size: 0.88rem;
+  color: #6b7280;
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-mini h1 {
+    font-size: 1.3rem;
+  }
+
+  .contenedor {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .tarjeta {
+    padding: 1.3rem 1.2rem;
+  }
+
+  .carousel__slide img {
+    height: 220px;
+  }
+
+  table {
+    font-size: 0.82rem;
+  }
+
+  thead th, tbody td {
+    padding: 0.6rem 0.7rem;
+  }
+}
